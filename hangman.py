@@ -23,7 +23,7 @@ def hangman():
     while index < len(wordGuessed):
         letter = input("Guess a letter:\n").lower()
 
-        if len(letter)==1 or letter.isdigit():
+        if len(letter)!=1 or letter.isdigit():
             print("Invalid entry!")
             continue
         if not isinstance(letter,str):
