@@ -2,6 +2,8 @@
 
 CODING CHALLENGE INSTRUCTIONS
 
+Time spent in the challenge: 1:53:27 
+
 Introduction
 Complete the challenge in the link below in the time given. Your goal is to code the best solution you can in the time given.
 A working solution is important, but don’t forget that the quality of the design and the clarity of the code are important as well. If you run into any ambiguities in the requirements, you may choose how to resolve them: just make sure that you document your choice.
