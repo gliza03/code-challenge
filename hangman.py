@@ -8,5 +8,5 @@ print ("Hello %s, Welcome to Hangman!", name)
 words = ["charm", "pretty", "obstacle", "difficulty", "speaker", "Peru", "sun", "vitamins", "fan", "glasses"]
 
 word = random.choice(words)
-
+print(word)
 
