@@ -39,7 +39,7 @@ def hangman():
             # Incorrect
             if letter not in word:
                 incorrectGuesses+=1
-                print("\nSorry! That letter is not in the word.")
+                print("\nSorry! {} is not in the word.".format(letter))
             
             # Correct
             for let, num in enumerate(word):
