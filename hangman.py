@@ -14,6 +14,7 @@ def hangman():
 
     wordGuessed = [ "_" for i in range(len(word))]
 
+    # Define variables
     guesses = 0
     incorrectGuesses = 0
     correctGuesses = 0
@@ -23,20 +24,24 @@ def hangman():
     while index < len(wordGuessed):
         letter = input("Guess a letter:\n").lower()
 
+        # Eliminate invalid entries, such as numbers
         if len(letter)!=1 or letter.isdigit():
             print("Invalid entry!")
             continue
         if not isinstance(letter,str):
             print("Invalid entry!")
             continue
-
+        
+        # If the letter was used, do not run the code
         if letter not in lettersUsed:
             lettersUsed.append(letter)
             guesses += 1
+            # Incorrect
             if letter not in word:
                 incorrectGuesses+=1
-                print("Sorry! That letter is not in the word.\n")
+                print("\nSorry! That letter is not in the word.")
             
+            # Correct
             for let, num in enumerate(word):
                 if num == letter:
                     wordGuessed[let] = letter
