@@ -16,6 +16,7 @@ wordGuessed = [ "_" for i in range(len(word))]
 guesses = 0
 incorrectGuesses = 0
 correctGuesses = 0
+index = 0
 
 while index < len(wordGuessed):
     letter = input("Guess a letter:")
