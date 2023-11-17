@@ -11,6 +11,24 @@ words = ["charm", "pretty", "obstacle", "difficulty", "speaker", "Peru", "sun", 
 word = random.choice(words)
 print ("Your word has {} letters".format(len(word)))
 
-wordGuessed = [ "_" for i in range(len(word))]
-print(wordGuessed)
+wordGuessed = [ "_" for i in len(word)]
+
+guesses = 0
+incorrectGuesses = 0
+correctGuesses = 0
+
+while "_" not in wordGuessed:
+    letter = input("Guess a letter:")
+    guesses += 1
+    for let, num in enumerate(word):
+        if let == letter:
+            wordGuessed[num] = letter
+            correctGuesses += 1
+        else:
+            print("This letter is not in the word. Try again!")
+            incorrectGuesses +=1
+    print(wordGuessed)
+    print("Number of guesses: {} (Correct: {} | Incorrect: {})".format(guesses,correctGuesses,incorrectGuesses))
+    
+print("You guessed right!")
 
