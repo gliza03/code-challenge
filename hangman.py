@@ -23,7 +23,7 @@ def hangman():
     while index < len(wordGuessed):
         letter = input("Guess a letter:\n").lower()
 
-        if type(letter) != str or len(letter)>1:
+        if letter.isdigit() or len(letter)>1:
             print("Invalid!")
             continue
 
@@ -48,7 +48,7 @@ def hangman():
     print("You guessed right!")
     print("Number of guesses: {} (Correct: {} | Incorrect: {})\n\n".format(guesses,correctGuesses,incorrectGuesses))
 
-    decision = input("Do you want to play again? Type Y for yes and N for no.\n")
+    decision = input("Do you want to play again? Type Y for yes, if not, type anything else.\n")
     if decision == "Y":
         hangman()
     exit()
