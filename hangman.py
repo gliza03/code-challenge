@@ -22,8 +22,8 @@ while index < len(wordGuessed):
     letter = input("Guess a letter:")
     guesses += 1
     for let, num in enumerate(word):
-        if let == letter:
-            wordGuessed[num] = letter
+        if num == letter:
+            wordGuessed[let] = letter
             correctGuesses += 1
             index+=1
         else:
