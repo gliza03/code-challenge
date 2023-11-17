@@ -17,7 +17,7 @@ guesses = 0
 incorrectGuesses = 0
 correctGuesses = 0
 
-while "_" not in wordGuessed:
+while "_" in wordGuessed:
     letter = input("Guess a letter:")
     guesses += 1
     for let, num in enumerate(word):
