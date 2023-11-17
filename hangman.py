@@ -25,7 +25,7 @@ def hangman():
 
         if type(letter) != str or len(letter)>1:
             print("Invalid!")
-            break
+            continue
 
         if letter not in lettersUsed:
             lettersUsed.append(letter)
