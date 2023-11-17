@@ -48,6 +48,7 @@ def hangman():
                     correctGuesses += 1
                     index+=1
         elif letter in lettersUsed:
+            guesses += 1
             print("You already used that letter!\n")
         
         print(wordGuessed)
