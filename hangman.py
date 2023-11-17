@@ -11,6 +11,6 @@ words = ["charm", "pretty", "obstacle", "difficulty", "speaker", "Peru", "sun", 
 word = random.choice(words)
 print ("Your word has {} letters".format(len(word)))
 
-wordGuessed = [ "_" for i in len(word)]
+wordGuessed = [ "_" for i in range(len(word))]
 print(wordGuessed)
 
