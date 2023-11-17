@@ -17,13 +17,14 @@ guesses = 0
 incorrectGuesses = 0
 correctGuesses = 0
 
-while "_" in wordGuessed:
+while index < len(wordGuessed):
     letter = input("Guess a letter:")
     guesses += 1
     for let, num in enumerate(word):
         if let == letter:
             wordGuessed[num] = letter
             correctGuesses += 1
+            index+=1
         else:
             print("This letter is not in the word. Try again!")
             incorrectGuesses +=1
