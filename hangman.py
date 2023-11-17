@@ -41,3 +41,4 @@ def hangman():
         hangman()
     exit()
 
+hangman()
