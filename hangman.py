@@ -18,24 +18,31 @@ def hangman():
     incorrectGuesses = 0
     correctGuesses = 0
     index = 0
+    lettersUsed = []
 
     while index < len(wordGuessed):
-        letter = input("Guess a letter:")
-        guesses += 1
-        if letter not in word:
-            incorrectGuesses+=1
-            print("Sorry! That letter is not in the word.")
-        
-        for let, num in enumerate(word):
-            if num == letter:
-                wordGuessed[let] = letter
-                correctGuesses += 1
-                index+=1
+        letter = input("Guess a letter:\n")
+        if letter not in lettersUsed:
+            lettersUsed.append(letter)
+            guesses += 1
+            if letter not in word:
+                incorrectGuesses+=1
+                print("Sorry! That letter is not in the word.\n")
+            
+            for let, num in enumerate(word):
+                if num == letter:
+                    wordGuessed[let] = letter
+                    correctGuesses += 1
+                    index+=1
+        else:
+            print("You already used that letter!")
         
         print(wordGuessed)
         print("Number of guesses: {} (Correct: {} | Incorrect: {})".format(guesses,correctGuesses,incorrectGuesses))
         
-    print("You guessed right!")
+    print("You guessed right!\n")
+    print("Number of guesses: {} (Correct: {} | Incorrect: {})".format(guesses,correctGuesses,incorrectGuesses))
+
     decision = input("Do you want to play again? Type Y for yes and N for no.")
     if decision == "Y":
         hangman()
