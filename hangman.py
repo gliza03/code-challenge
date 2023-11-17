@@ -21,7 +21,7 @@ def hangman():
     lettersUsed = []
 
     while index < len(wordGuessed):
-        letter = lower(input("Guess a letter:\n"))
+        letter = input("Guess a letter:\n").lower()
 
         if type(letter) != str or len(letter)>1:
             print("Invalid!")
