@@ -5,7 +5,7 @@ name = input("What is your name?\n")
 print ("Hello {}, Welcome to Hangman!".format(name))
 
 # Define list of words
-words = ["charm", "pretty", "obstacle", "difficulty", "speaker", "Peru", "sun", "vitamins", "fan", "glasses"]
+words = ["charm", "pretty", "obstacle", "difficulty", "speaker", "prey", "sun", "vitamins", "fan", "glasses"]
 
 def hangman():
     # Randomize word and output length
@@ -23,7 +23,7 @@ def hangman():
     while index < len(wordGuessed):
         letter = input("Guess a letter:\n").lower()
 
-        if not isinstance(letter,str) or not len(letter)==1:
+        if not isinstance(letter,str) or not len(letter)==1 or letter.isdigit():
             print("Invalid!")
             continue
 
