@@ -34,16 +34,16 @@ def hangman():
                     wordGuessed[let] = letter
                     correctGuesses += 1
                     index+=1
-        else:
-            print("You already used that letter!")
+        elif letter in lettersUsed:
+            print("You already used that letter!\n")
         
         print(wordGuessed)
-        print("Number of guesses: {} (Correct: {} | Incorrect: {})".format(guesses,correctGuesses,incorrectGuesses))
+        print("Number of guesses: {} (Correct: {} | Incorrect: {})\n\n".format(guesses,correctGuesses,incorrectGuesses))
         
     print("You guessed right!\n")
-    print("Number of guesses: {} (Correct: {} | Incorrect: {})".format(guesses,correctGuesses,incorrectGuesses))
+    print("Number of guesses: {} (Correct: {} | Incorrect: {})\n\n".format(guesses,correctGuesses,incorrectGuesses))
 
-    decision = input("Do you want to play again? Type Y for yes and N for no.")
+    decision = input("Do you want to play again? Type Y for yes and N for no.\n")
     if decision == "Y":
         hangman()
     exit()
