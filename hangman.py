@@ -21,7 +21,11 @@ def hangman():
     lettersUsed = []
 
     while index < len(wordGuessed):
-        letter = input("Guess a letter:\n")
+        letter = lower(input("Guess a letter:\n"))
+
+        if type(letter) != str or len(letter)>1:
+            print("Invalid!")
+
         if letter not in lettersUsed:
             lettersUsed.append(letter)
             guesses += 1
@@ -40,7 +44,7 @@ def hangman():
         print(wordGuessed)
         print("Number of guesses: {} (Correct: {} | Incorrect: {})\n\n".format(guesses,correctGuesses,incorrectGuesses))
         
-    print("You guessed right!\n")
+    print("You guessed right!")
     print("Number of guesses: {} (Correct: {} | Incorrect: {})\n\n".format(guesses,correctGuesses,incorrectGuesses))
 
     decision = input("Do you want to play again? Type Y for yes and N for no.\n")
